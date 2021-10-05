@@ -15,8 +15,8 @@ Syntax highlighted code block
 ## Header 2
 ### Header 3
 
-- Bulleted[Literature_review.pdf](https://github.com/ZiyanXiong/Geometric-Modeling/files/7283038/Literature_review.pdf)
-[Literature_review.pdf](https://github.com/ZiyanXiong/Geometric-Modeling/files/7283043/Literature_review.pdf)
+- Bulleted[Literature_review.pdf](https://github.com/ZiyanXiong/Geometric-Modeling/files/Literature_review.pdf)
+
 
 - List
 
