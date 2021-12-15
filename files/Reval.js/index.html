@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Final Presentation</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+	* {
+	  box-sizing: border-box;
+	}
+
+	.row {
+	  display: flex;
+	}
+
+	/* Create three equal columns that sits next to each other */
+	.column {
+	  flex: 33.33%;
+	  padding: 5px;
+	}
+	</style>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-background-image = "../Final_Report/gifs/soft_ball_fall.gif">
+					<h2 class="r-fit-text">Physically Based Simulation For Soft Objects</h2>
+					<p>Ziyan Xiong</p>
+				</section>
+
+				<section>
+					<h2> Cloth Simulation </h2>
+					<img src="../Final_Report/gifs/cloth_simulation_example.gif" width="70%" />
+					<p style = "font-size: 10px;">My cloth simulation code is based on the code in <a href="https://people.engr.tamu.edu/sueda/courses/CSCE489/2021F/assignments/A5/index.html">Assignment 5</a> in CSCE 489: Computer Animation taught by Professor Sueda. </p>
+				</section>
+
+				<section>
+					<h2>Fluid Simulation</h2>
+					<img src="../Final_Report/gifs/fluid_simulation_example.gif" width="70%" />
+					<p style = "font-size: 10px;">My fluid simulation is based on the paper by <a href="http://www.ligum.umontreal.ca/Clavet-2005-PVFS/pvfs.pdf">Clavet et al. (2005)</a>.</p>
+				</section>
+
+				<section>
+					<h3 class="r-fit-text">Modifications to cloth and fluid simulation</h3>
+					<ul>
+						<li>Large radius, Small collision coefficients</li>
+						<li>Environmental fluid particles</li>
+						<li>Separate rest density</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2 class="r-fit-text">Radius and collision coefficients</h2>
+						<div class="row">
+						  <div class="column">
+						    <img src="../Final_Report/pngs/small_radius.png" alt="Snow" style="width:100%">
+								<p>Small radius, Large collision coefficients<p>
+						  </div>
+						  <div class="column">
+						    <img src="../Final_Report/pngs/large_radius.png" alt="Forest" style="width:100%">
+								<p>Large radius, Small collision coefficients<p>
+						  </div>
+						</div>
+					</section>
+					<section>
+						<div class="row">
+							<div class="column">
+								<img src="../Final_Report/gifs/small_radius_example.gif" alt="Snow" style="width:100%">
+								<p>Small radius, Large collision coefficients<p>
+							</div>
+							<div class="column">
+								<img src="../Final_Report/gifs/large_radius_example.gif" alt="Forest" style="width:100%">
+								<p>Large radius, Small collision coefficients<p>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h3 class="r-fit-text">Cloth pushed by fluid particles</h3>
+						<img src="../Final_Report/gifs/cloth_pushed.gif" width="70%" />
+					</section>
+				</section>
+
+				<section>
+					<h3 class="r-fit-text">Environmental fluid particles</h3>
+					<img src="../Final_Report/gifs/environmental_fluid_particles.gif" width="70%" />
+				</section>
+
+				<section>
+					<section>
+						<h3 class="r-fit-text">Separate rest density</h3>
+						<div class="row">
+							<div class="column">
+								<img src="../Final_Report/pngs/same_rest_density.png" alt="Snow" style="width:100%">
+								<p>Same rest density<p>
+							</div>
+							<div class="column">
+								<img src="../Final_Report/pngs/different_rest_density.png" alt="Forest" style="width:100%">
+								<p>Different rest density<p>
+							</div>
+					</div>
+				</section>
+				<section>
+					<h3 class="r-fit-text">Separate rest density</h3>
+					<img src="../Final_Report/gifs/fluid_squeezed.gif" alt="Forest" style="width:70%">
+				</section>
+			</section>
+
+			<section data-background-iframe="../Final_Report/Final_Report.html#Results"
+			          data-background-interactive>
+				<div align="left">
+				<p>RESULTS</p>
+				</div>
+			</section>
+
+			<section>
+				<section>
+					<h3>Future work</h3>
+					<ul>
+						<li>Automatically connect vertices with springs</li>
+						<li>Optimize for neighborhood particles searching</li>
+						<li>Separate the time step for cloth and fluid simulation</li>
+						<li>Complex models</li>
+					</ul>
+				</section>
+				<section>
+					<h3>How to apply this method to complex models</h3>
+					<img src="../Final_Report/pngs/medial_axis.png" alt="Forest" style="width:30%">
+				</section>
+			</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
